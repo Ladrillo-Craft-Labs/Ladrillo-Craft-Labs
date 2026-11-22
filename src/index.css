@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #181B20;
+  color: #F1F5F9;
+  overflow-x: hidden;
+}
+
+/* Subtle architectural blueprint grid */
+.lab-grid {
+  background-size: 56px 56px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+}
+
+/* Glassmorphic Header */
+.lab-nav {
+  background: rgba(24, 27, 32, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+/* Studio Cards */
+.lab-card {
+  background: linear-gradient(160deg, rgba(36, 41, 49, 0.82) 0%, rgba(26, 30, 36, 0.94) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.lab-card:hover {
+  border-color: rgba(224, 90, 43, 0.45);
+  transform: translateY(-4px);
+  box-shadow: 0 22px 44px -16px rgba(0, 0, 0, 0.65);
+}
+
+/* StreamPlayer Spotlight Container (Pink Vortex accent within Lab Slate) */
+.streamplayer-showcase {
+  background: radial-gradient(circle at 85% 20%, rgba(255, 20, 147, 0.14) 0%, rgba(30, 34, 40, 0.95) 55%, rgba(20, 12, 18, 0.98) 100%);
+  border: 1px solid rgba(255, 105, 180, 0.25);
+  box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.75);
+}
+
+/* Dual-Tone Gradient Text */
+.duotone-text {
+  background: linear-gradient(125deg, #FFFFFF 0%, #F07549 52%, #4299E1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.btn-terra {
+  background: linear-gradient(135deg, #E05A2B 0%, #C8481C 100%);
+  box-shadow: 0 10px 26px -6px rgba(224, 90, 43, 0.45);
+  transition: all 0.25s ease;
+}
+
+.btn-terra:hover {
+  background: linear-gradient(135deg, #F07549 0%, #E05A2B 100%);
+  box-shadow: 0 14px 32px -4px rgba(224, 90, 43, 0.65);
+  transform: translateY(-2px);
+}
+
+.btn-stream-pink {
+  background: linear-gradient(135deg, #FF1493 0%, #D946EF 100%);
+  box-shadow: 0 10px 28px -6px rgba(255, 20, 147, 0.5);
+  transition: all 0.25s ease;
+}
+
+.btn-stream-pink:hover {
+  box-shadow: 0 14px 36px -4px rgba(255, 20, 147, 0.75);
+  transform: translateY(-2px);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #181B20;
+}
+::-webkit-scrollbar-thumb {
+  background: #333A45;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #E05A2B;
+}
